@@ -1,0 +1,108 @@
+<!--
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>弹幕大屏</title>
+<head>
+    <meta charset="UTF-8">
+    &lt;!&ndash; import CSS &ndash;&gt;
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+ &lt;!&ndash;   <script type="text/javascript" th:src="@{/dist/vue-baberrage.js}"></script>&ndash;&gt;
+    <script src="./dist/vue-baberrage.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-container>
+        &lt;!&ndash;        <el-header>弹幕大屏</el-header>&ndash;&gt;
+    </el-container>
+
+</div>
+<div class="foot">京ICP备20013876<br>@laughing 2020 - 2020</div>
+</body>
+&lt;!&ndash; import Vue before Element &ndash;&gt;
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+&lt;!&ndash; import JavaScript &ndash;&gt;
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+
+    import {MESSAGE_TYPE} from 'vue-baberrage'
+    Vue.use(MESSAGE_TYPE)
+    new Vue({
+
+
+        el: '#app',
+        data() {
+            return {
+                msg: 'Hello vue-baberrage',
+                barrageIsShow: true,
+                currentId: 0,
+                barrageLoop: false,
+                barrageList: []
+            };
+        },
+        created() {
+
+            this.addToList();
+            /*            setInterval(function () {
+                            $.ajax({
+                                url: "http://localhost/danmaku/show",
+                                //   url:"https://laughing-blog.cn/danmaku/show",
+                                type: "get",
+                                dataType: "json",
+                                success: function (res) {
+                                    this.dmData = res.records;
+                                    console.log(this.dmData);
+                                },
+                                error: function (error) {
+                                }
+                            })
+                        }, 10000);*/
+
+        },
+        mounted() {
+
+        },
+        components: {
+            // 将组建加入组建库
+        },
+
+
+            })
+</script>
+<style>
+    body {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://api.dujin.org/bing/1920.php) 0px 0px no-repeat;
+    }
+
+    header {
+        color: #ffffff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 290px;
+    }
+
+    .el-form-item__label {
+        color: #ffffff;
+    }
+
+
+    .app-block {
+        width: 28%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 3em 5em;
+        height: 80%;
+    }
+
+    .foot {
+
+        color: white;
+        font-size: 14px;
+        position: fixed;
+        bottom: 8%;
+        left: 45%;
+    }
+</style>
+</html>
+-->
